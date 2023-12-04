@@ -20,7 +20,7 @@ pipeline {
         stage ('Deploy-Tomcat') {
             steps {
                 script {
-                    deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', path: '', url: 'http://43.205.128.205:8080/')], 
+                    deploy adapters: [tomcat9(credentialsId: 'tomcat-manager', path: '', url: 'http://3.108.185.40:8080/')], 
                                      contextPath: '/calculator', 
                                      war: 'maven/calculator_app/target/calculator.war'
                     
